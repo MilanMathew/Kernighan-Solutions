@@ -5,7 +5,7 @@
 /*Histogram of the lengths of words in input.*/
 void main()
 {
-    int ch, state, count;
+    int ch, state, count, i;
     count = 0; 
     state = OUT;
     
@@ -14,12 +14,14 @@ void main()
     while ((ch = getchar()) != EOF) {
         if (ch == ' ' || ch == '\n' || ch == '\t') {
             state = OUT;
-            printf("%4d\n", count);
+            for (i = count; i > 0; --i)
+                printf("|"); 
+            printf("\n");
             count = 0;
         }
-        else if (state == OUT) {
+        else if (state == OUT && ch != '.' && ch != ',') {
             state = IN;
-            count ++;
+            ++count;
             printf("%c", ch); 
             state = OUT;
         } 
