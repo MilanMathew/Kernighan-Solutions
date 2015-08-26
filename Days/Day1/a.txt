@@ -1,0 +1,7 @@
+dynamically typed and statically typed languages                      [Read wiki recursive-labs]
+*static typing with type inference(used by functional langs)
+
+python, pearl, ruby, lisp etc.......
+c, java c++, scala, haskell, ocaml etc......
+
+type() in python- python compilation and execution model- working of the VM- 
